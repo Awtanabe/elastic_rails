@@ -4,9 +4,9 @@ class Post < ApplicationRecord
   settings do
      mappings dynamic: false do
        indexes :author, type: :text
-       indexes :title, type: :text, analyzer: :english
-       indexes :body, type: :text, analyzer: :english
-       indexes :tags, type: :text, analyzer: :english
+       indexes :title, type: :text, analyzer: :kuromoji
+       indexes :body, type: :text, analyzer: :kuromoji
+       indexes :tags, type: :text, analyzer: :kuromoji
        indexes :published, type: :boolean
      end
    end
